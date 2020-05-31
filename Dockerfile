@@ -22,7 +22,7 @@ ENV LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8"
 
-RUN apk add --no-cache mariadb mariadb-client mariadb-server-utils pwgen && \
+RUN apk add --no-cache mariadb mariadb-client mariadb-server-utils pwgen bash perl-dbi perl-dbd-mysql && \
     rm -f /var/cache/apk/*
 
 ADD files/run.sh /scripts/run.sh

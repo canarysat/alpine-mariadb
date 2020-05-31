@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  mariadb:
+    image: canarysat/alpine-mariadb:latest
+    network_mode: bridge
+    restart: always
+    container_name: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
+    ports:
+      - "3306:3306"
+    volumes:
+      - '$PWD/mysql:/var/lib/mysql'
