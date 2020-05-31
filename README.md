@@ -48,8 +48,9 @@ MariaDB is developed as open source software and as a relational database it pro
 ## Layers & Sizes
 
 ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/canarysat/alpine-mariadb/amd64.svg?style=for-the-badge)
+![Docker Pulls](https://img.shields.io/docker/pulls/canarysat/alpine-mariadb)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/canarysat/alpine-mariadb)
+
 
 
 
