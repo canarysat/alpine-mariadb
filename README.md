@@ -1,14 +1,14 @@
 # MariaDB Docker image running on Alpine Linux
 
-[![Docker Automated build](https://img.shields.io/docker/automated/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
-[![Docker Stars](https://img.shields.io/docker/stars/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
+[![Docker Automated build](https://img.shields.io/docker/automated/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/canarysat/alpine-mariadb/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/canarysat/alpine-mariadb/)
+[![Docker Stars](https://img.shields.io/docker/stars/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/canarysat/alpine-mariadb/)
 
 [![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.11.6-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![MariaDB Version](https://img.shields.io/badge/Mariadb%20version-v10.4.13-green.svg?style=for-the-badge)](https://mariadb.org/)
 
 
-This Docker image [(canarysat/alpine-mariadb)](https://hub.docker.com/u/canarysat/alpine-mariadb/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) with [MariaDB v10.4.13](https://mariadb.org/) (MySQL Compatible) database server.
+This Docker image [(canarysat/alpine-mariadb)](https://hub.docker.com/r/canarysat/alpine-mariadb/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) with [MariaDB v10.4.13](https://mariadb.org/) (MySQL Compatible) database server.
 
 ##### Alpine Version 3.12.0 (Released May 29, 2020)
 ##### MariaDB Version 10.4.13
@@ -189,5 +189,5 @@ services:
 ```
 BITCOIN:
 ETHEREUM:
-ZCASH: 
+ZCASH:
 ```
