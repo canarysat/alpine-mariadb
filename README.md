@@ -4,7 +4,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/canarysat/alpine-mariadb/)
 [![Docker Stars](https://img.shields.io/docker/stars/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/canarysat/alpine-mariadb/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.11.6-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.12.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![MariaDB Version](https://img.shields.io/badge/Mariadb%20version-v10.4.13-green.svg?style=for-the-badge)](https://mariadb.org/)
 
 
