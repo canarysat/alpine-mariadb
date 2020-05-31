@@ -1,16 +1,16 @@
 # MariaDB Docker image running on Alpine Linux
 
-[![Docker Automated build](https://img.shields.io/docker/automated/yobasystems/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
-[![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
+[![Docker Automated build](https://img.shields.io/docker/automated/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
+[![Docker Stars](https://img.shields.io/docker/stars/canarysat/alpine-mariadb.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/u/canarysat/alpine-mariadb/)
 
 [![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.11.6-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![MariaDB Version](https://img.shields.io/badge/Mariadb%20version-v10.4.13-green.svg?style=for-the-badge)](https://mariadb.org/)
 
 
-This Docker image [(canarysat/alpine-mariadb)](https://hub.docker.com/u/canarysat) is based on the minimal [Alpine Linux](https://alpinelinux.org/) with [MariaDB v10.4.13](https://mariadb.org/) (MySQL Compatible) database server.
+This Docker image [(canarysat/alpine-mariadb)](https://hub.docker.com/u/canarysat/alpine-mariadb/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) with [MariaDB v10.4.13](https://mariadb.org/) (MySQL Compatible) database server.
 
-##### Alpine Version 3.11.6 (Released April 23, 2020)
+##### Alpine Version 3.12.0 (Released May 29, 2020)
 ##### MariaDB Version 10.4.13
 
 ----
@@ -48,8 +48,8 @@ MariaDB is developed as open source software and as a relational database it pro
 ## Layers & Sizes
 
 ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-mariadb/amd64.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-mariadb/amd64.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/canarysat/alpine-mariadb/amd64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/canarysat/alpine-mariadb/amd64.svg?style=for-the-badge)
 
 
 
@@ -154,18 +154,22 @@ When a container is started for the first time, a new database with the specifie
 ##### (Please pass your own credentials or let them be generated automatically, don't use these ones for production!!)
 
 ```yalm
-mysql:
-  image: canarysat/alpine-mariadb
-  environment:
-    MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
-    MYSQL_DATABASE: wordpressdb
-    MYSQL_USER: wordpressuser
-    MYSQL_PASSWORD: hguyFt6S95dgfR4ryb
-  expose:
-    - "3306"
-  volumes:
-    - /data/example/mysql:/var/lib/mysql
-  restart: always
+version: '3'
+
+services:
+
+  mariadb:
+    image: canarysat/alpine-mariadb:latest
+    network_mode: bridge
+    restart: always
+    container_name: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
+    ports:
+      - "3306:3306"
+    volumes:
+      - '$PWD/mysql:/var/lib/mysql'
+
 ```
 
 ## Source Repository
@@ -185,5 +189,5 @@ mysql:
 ```
 BITCOIN:
 ETHEREUM:
-ZCASH: t1MuAY2vR17vDK3BgCAtf8ZdXsCiBw3zkU6
+ZCASH: 
 ```
